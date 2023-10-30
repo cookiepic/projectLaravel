@@ -27,12 +27,15 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::redirect('/admin', '/admin/home');
+// Route::redirect('/admin', '/admin/home');
 
-Route::get('show', [ShowController::class, 'show']);
-Route::get('showusers', [ShowController::class, 'showView']);
-Route::get('showarray', [ShowController::class, 'showArray']);
+// Route::get('show', [ShowController::class, 'show']);
+// Route::get('showusers', [ShowController::class, 'showView']);
+// Route::get('showarray', [ShowController::class, 'showArray']);
 
 
-Route::get('userform', [ShowController::class, 'forms.user_form']);
-Route::get('UserFormController', [\App\Http\Controllers\UserFormController::class, 'showUser']);
+// Route::get('userform', [ShowController::class, 'forms.user_form']);
+// Route::get('UserFormController', [\App\Http\Controllers\UserFormController::class, 'showUser']);
+
+Route::view('userform', 'userForm');
+Route::get('UserFormController', [\App\Htpp\Controllers\UserFormController::class, 'showuser']);
