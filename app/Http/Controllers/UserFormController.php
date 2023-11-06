@@ -18,6 +18,6 @@ class UserFormController extends Controller
             'lastName' => $req->input('lastname'),
             'email' => $req->input('email'),
         ];
-        return view('user', ['user'=>$uer]);
+        return view('user', ['user'=>$user]);
     }
 }
